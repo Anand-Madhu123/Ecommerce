@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: #f5f7fa;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #1a73e8, #4a90e2);
+  color: white;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .company-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+
+    &.description {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      max-width: 320px;
+    }
+  }
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;  // center horizontally
+  align-items: center;      // center vertically
+  padding: 0 50px;
+  background: #f5f7fa;
+
+  .card {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 420px;
+
+    h2 {
+      color: #1a73e8;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .info-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px 15px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.3s ease;
+      outline: none;
+
+      &:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+      }
+    }
+
+    .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        color: #666;
+
+        input[type="checkbox"] {
+          cursor: pointer;
+        }
+      }
+
+      a {
+        color: #1a73e8;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    button {
+      background-color: #1a73e8;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #1664c0;
+      }
+    }
+  }
+}
